@@ -1,14 +1,13 @@
-<template>
+<template id="navbar">
     <div class="Navbar" id="navbar">
     <b-navbar toggleable="lg" type="light" variant="faded">
-        <b-navbar-brand href="/">NavBar</b-navbar-brand>
+        <b-navbar-brand href="/">{{ greeting }}</b-navbar-brand>
 
         <b-navbar-toggle target="nav_collapse" />
 
         <b-collapse is-nav id="nav_collapse">
-        <b-navbar-nav>
-            <b-nav-item href="/">Home</b-nav-item>
-            <b-nav-item href="/about">About</b-nav-item>
+        <b-navbar-nav v-for="(url, index) in uris">
+            <b-nav-item v-bind:href="url.url">{{ url.link }}</b-nav-item>
         </b-navbar-nav>
 
         <!-- Right aligned nav items -->
@@ -38,6 +37,21 @@
 </template>
 
 <script>
+
+export default {
+    data () {
+        return {
+            greeting : 'Hello Vue',
+            uris: [
+                { link : 'Home', url : '/' },
+                { link : 'About', url : '/about'}
+            ]
+        }
+    }
+}
+
+
+
 
 </script>
 
