@@ -6,6 +6,9 @@ import router from './router'
 import NavBar from "./components/NavBar/Navbar.vue"
 import Footer from "./components/Footer/Footer.vue"
 
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+
 Vue.component('NavBar', NavBar);
 Vue.component('Footer', Footer);
 
