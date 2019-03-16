@@ -1,5 +1,17 @@
-#app {
-    background-color: black;
-    height: 200px;
-    width: 200px;
+/*** Navbar ***/
+.navbar{
+    &-nav{
+        .nav-link{
+           &.is-active{
+            color: black;
+            font-weight: 500;
+           } 
+        }
+    }
 }
+.nav-link{
+    &.is-active{
+        
+    }
+}
+

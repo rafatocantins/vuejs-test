@@ -7,16 +7,19 @@ import router from './router'
 
 import Navbar from "./components/NavBar/Navbar.vue"
 import Footer from "./components/Footer/Footer.vue"
+import Header from "./components/Header/Header.vue"
 
-/* Import Boostrap files */
+/* Import Css and Boostrap files */
 
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+import "./assets/components/scss/style.scss"
 
 /* Listing Components */
 
 Vue.component('Navbar', Navbar);
 Vue.component('Footer', Footer);
+Vue.component('Header', Header);
 
 /* Use Bootstrap Vue */
 Vue.use(BootstrapVue)
