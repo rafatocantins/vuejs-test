@@ -6,8 +6,8 @@
         <b-navbar-toggle target="nav_collapse" />
 
         <b-collapse is-nav id="nav_collapse">
-        <b-navbar-nav v-for="(url, index) in uris">
-            <b-nav-item v-bind:href="url.url">{{ url.link }}</b-nav-item>
+        <b-navbar-nav v-for="url in uris" v-bind:data="url" v-bind:key="url.url">
+            <b-nav-item :key="url.url" :to="url.url" v-bind:href="url.url">{{ url.link }}</b-nav-item>
         </b-navbar-nav>
 
         <!-- Right aligned nav items -->
@@ -44,7 +44,8 @@ export default {
             greeting : 'Hello Vue',
             uris: [
                 { link : 'Home', url : '/' },
-                { link : 'About', url : '/about'}
+                { link : 'About', url : '/about'},
+                { link : 'Category', url : '/category'}
             ]
         }
     }
@@ -54,4 +55,12 @@ export default {
 
 
 </script>
+
+<style scoped>
+
+.router-link-active{
+    color: black;
+}
+
+</style>
 
